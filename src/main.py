@@ -3,7 +3,6 @@
 简易Office MCP服务器
 支持Word、Excel、PPT文档的基本操作
 """
-
 import asyncio
 import json
 import os
@@ -14,6 +13,7 @@ from typing import Any, Dict, List, Optional
 from mcp.server import Server
 from mcp.server.models import InitializationOptions
 from mcp.server.stdio import stdio_server
+from mcp.server.lowlevel.server import NotificationOptions
 from mcp.types import (
     CallToolRequest,
     CallToolResult,
@@ -22,7 +22,7 @@ from mcp.types import (
     Tool,
     TextContent,
     ImageContent,
-    EmbeddedResource
+    EmbeddedResource,
 )
 
 # Office文档处理库
@@ -475,7 +475,7 @@ async def main():
                 server_name="office-manager",
                 server_version="1.0.0",
                 capabilities=server.get_capabilities(
-                    notification_options=None,
+                    notification_options=NotificationOptions(tools_changed=False),
                     experimental_capabilities=None
                 )
             )

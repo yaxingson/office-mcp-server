@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "office-mcp-server": {
+      "command": "python",
+      "args": ["src/main.py"],
+      "cwd": "./"
+    }
+  }
+}
