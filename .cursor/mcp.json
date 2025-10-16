@@ -2,8 +2,7 @@
   "mcpServers": {
     "office-mcp-server": {
       "command": "python",
-      "args": ["src/main.py"],
-      "cwd": "./"
+      "args": ["src/main.py"]
     }
   }
 }

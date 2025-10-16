@@ -1,7 +1,13 @@
 [project]
-name = "tmp"
+name = "office-mcp-server"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "mcp>=1.11.0",
+    "openpyxl>=3.1.5",
+    "python-docx>=1.2.0",
+    "python-pptx>=1.0.2",
+    "typer>=0.19.2",
+]
